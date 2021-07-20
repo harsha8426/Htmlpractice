@@ -1,0 +1,31 @@
+
+.text{
+    position: absolute;
+    left: 63%;
+}
+.password
+{
+    position: absolute;
+    left: 75%;
+}
+.button
+{
+    background-color:  hsl(221deg 44% 42%)o;
+    cursor: pointer;
+    border-radius: 15%;
+}
+h3{
+    position: absolute;
+    left: 70%;
+    font-size: x-large;
+    font-family:  Arial, Helvetica, sans-serif;
+}
+h4
+{
+    position: absolute;
+    left: 67%;
+}
+p{
+    position: absolute;
+    left: 67%;
+}

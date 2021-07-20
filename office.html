@@ -1,0 +1,2143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" dir="ltr">
+<head>
+        <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>My HCL</title>
+
+    <script src="/bprhome/Scripts/jquery-1.9.1.js" type="text/javascript"></script>
+
+
+    
+
+    <script type="text/javascript" language="javascript" src="/bprhome/js/modernizr.js"></script>
+
+
+
+    <link href="/bprhome/Css/style_Index.css?version=0.0.0.0" rel="stylesheet" type="text/css" />
+
+
+    
+    
+    
+    <script type="text/javascript" language="javascript">
+        function HitLog(Col) {
+        $.post('/bprhome/Home/HitLog', { ColID: Col });
+        }
+        $(document).ready(function(){
+        //add for ADFS no dealing period
+            $('.closeB').click(function(){
+                $(this).parent().hide();
+            });
+            ///End  for ADFS no dealing period
+
+         var modelData = "";
+         var  popup =  modelData.split('_');
+        // alert(popup[1]+'zy'+popup[0]);
+
+
+         if( modelData != "") {
+                PopUpOpenerOnLoadTime('../Webpages/popup.aspx',popup[1],popup[0]);
+              }
+        });
+    </script>
+</head>
+<body>
+    <div id="outer-wrap">
+        <div id="inner-wrap">
+            <div id="top" role="banner">
+                <a class="nav-btn" id="nav-open-btn" href="#nav">Navigation</a>
+            </div>
+            <div id="main" role="main">
+<div class="header">
+    <div class="wrapperIn">
+        <div class="logoIn">
+        </div>
+        <ul class="top-nav">
+            <li><a href="javascript:void(0)" id="setting">
+                <div class="userName" title="">
+                    Hi  &nbsp;</div>
+                <span></span></a>
+                <ul id="acnt-info">
+                    <span class="arrowSprit"></span>
+                    <li class="userNameMob"><a href="javascript:void(0)">Hi 
+                        &nbsp;</a></li>
+                    <li><a href="#" onclick="PopUpOpener('https://sspr.hcl.com','height=1000; width=890 ; resizeable=0');">
+                        Change Password</a></li>
+                    <li><a href="../OtherFiles/Contact%20Us.htm">Helplines</a></li>
+                    <li><a href="javascript:confirmLogout()">Logout.</a></li>
+                </ul>
+            </li>
+            <li id="selectCity" class="custom-select"><a href="javascript:void(0)"><span class="updateVal"
+                id="ancher_assigncity">New Delhi</span> &nbsp;<div class="stateDD">
+                </div>
+            </a>
+                <input id="Hidden_1" type="hidden" value="+5.5" />
+                <ul id="GlobalDateTimeDropDown">
+                    <span class="arrowSprit"></span>
+                    <li id="a5.5">New Delhi</li>
+                    <li id="a13">Auckland</li>
+                    <li id="a8">Beijing</li>
+                    <li id="a2">Berlin</li>
+                    <li id="b3">Brasilia</li>
+                    <li id="b3">Buenos Aires</li>
+                    <li id="a2">Cape Town</li>
+                    <li id="b5">Chicago</li>
+                    <li id="a4">Dubai</li>
+                    <li id="a2">Frankfurt</li>
+                    <li id="a3">Helsinki</li>
+                    <li id="a8">Hongkong</li>
+                    <li id="a2">Johannesburg</li>
+                    <li id="a8">Kuala Lumpur</li>
+                    <li id="b8">Los Angeles</li>
+                    <li id="a1">London</li>
+                    <li id="a11">Melbourne</li>
+                    <li id="b6">Mexico</li>
+                    <li id="a3">Moscow</li>
+                    <li id="b4">New York</li>
+                    <li id="a2">Oslo</li>
+                    <li id="a2">Paris</li>
+                    <li id="a8">Perth</li>
+                    <li id="b3">Rio De Janerio</li>
+                    <li id="b3">Sao Paulo</li>
+                    <li id="a8">Singapore</li>
+                    <li id="a11">Sydney</li>
+                    <li id="b4">Toronto</li>
+                    <li id="a9">Tokyo</li>
+                    <li id="b7">Vancouver</li>
+                    <li id="a2">Warsaw</li>
+                    <li id="b4">Washington</li>
+                </ul>
+            </li>
+            <li class="GDateTime"><a id="GlobalDateTimeText"></a>
+            <input id="txtoffsettime" type="hidden" value="a5.5" />
+            <p id="ptest" style="display: none;">
+                a5.5</p>
+            </li>
+            <li id="lastLI">
+<input id="hddMyapprovalAPIMsg" type="hidden" value="0" />
+
+<div id="notification">
+    <div class="listing">
+        <a href="javascript:void(0)">
+            <span class="heading lw">Notifications</span><span class="heading rw">
+                Last
+                date
+            </span>
+        </a>
+
+            <span id="spnNoRecord" class="heading lw">No Notification Found</span><span id="spnNoDate"> -- </span>
+    </div>
+    <div class="listing" id="dvMyApprovalList">
+        <a href="#" onclick="PopUpOpener('https://wf5.myhcl.com/myinbox/design/Home.aspx','height=1000; width=700; resizeable=0');">
+            <span id="MyapprovalAPIMsg" class="nf-list lw"  style="min-height: 44px;"> </span>
+            <span id="MyapprovalAPIDate" class="nf-date rw">
+                24 Sep, 2020
+            </span>
+        </a>
+    </div>
+
+
+</div>
+<a href="javascript:void(0)" id="noti">
+        <span id="noti1" class="not">0</span>
+</a>
+
+<script type="text/javascript">
+//$("#noti").click(function(){
+    $(document).ready(function () {
+        $("#dvMyApprovalList").hide();
+        $.ajax({
+            method: "GET",
+            cache: false,
+            async: true,
+            url: '/bprhome/home/GetNotificationAPI_New',
+            dataType: 'json',
+            contentType: 'application/json;charset=utf-8;',
+            error: function (data) {
+                //console.log(data);
+                //alert("Error");
+            },
+            success: function (data) {
+                //console.log(data);
+                var varPendingApproval = 0;
+                $.each(data, function (index, item) {
+                    if (item.Response > 0) {
+                        if (varPendingApproval == 0) {
+                           // $("#MyapprovalAPIMsg").text('Pending Approvals ' + item.ApplicationName + " : " + "(" + item.Response + ")");
+                            $("#MyapprovalAPIMsg").text('Pending Approvals ' + item.ApplicationName + " (" + item.Response + ")");
+                        }
+                        else {
+                          // $("#MyapprovalAPIMsg").append('&nbsp;' + ", " + item.ApplicationName + " :  " + "(" + item.Response + ")");
+                            $("#MyapprovalAPIMsg").append('&nbsp;' + ", " + item.ApplicationName +  " (" + item.Response + ")");
+                        }
+                        varPendingApproval = varPendingApproval + parseInt(item.Response);
+                    }
+                });
+                if (varPendingApproval == 0) {
+                    $("#dvMyApprovalList").hide();
+                }
+                else {
+                    $("#dvMyApprovalList").show();
+                }
+               // console.log(varPendingApproval);
+               // console.log($("#spnNoRecord").text());
+                if (data !== "") {
+                    if (varPendingApproval > 0  &&  $("#spnNoRecord").text() !== "") {
+                        $("#spnNoRecord").append("demo");
+                        $("#spnNoRecord").remove();
+                        $("#spnNoDate").remove();
+                    }
+                    var noticount = parseInt('0') + varPendingApproval;
+                    $("#noti1").text(noticount);
+                 $("#hddMyapprovalAPI").val(varPendingApproval);
+                }
+            },
+            exception: function (data) {
+                console.log(data);
+            }
+        })
+    });
+</script>
+
+
+            </li>
+        </ul>
+    </div>
+    <div class="clear">
+    </div>
+</div>
+<script type="text/javascript" language="javascript">
+    $(document).ready(function () {
+        $('#GlobalDateTimeDropDown li').click(function () {
+            var _varoffsetvalue = '';
+            _varoffsetvalue = $(this).attr('id');
+            if (_varoffsetvalue.contains('a')) {
+                _varoffsetvalue = _varoffsetvalue.replace('a', '+');
+            }
+            else {
+                _varoffsetvalue = _varoffsetvalue.replace('b', '-');
+            }
+            document.getElementById('Hidden_1').value = '';
+            document.getElementById('Hidden_1').value = _varoffsetvalue;
+            CalculateGlobalDateTime('Time', _varoffsetvalue);
+            setInterval(function () { CalculateGlobalDateTime('Time', document.getElementById('Hidden_1').value) }, 1000);
+        });
+    });
+</script>
+                <!-- End No adfs -->
+                    <div class="dealPer">Trading Window for dealing in the Company�s shares shall be closed w.e.f. September 25, 2020. The date of re-opening of the same shall be intimated in due course.  <img class="closeB" src="../images/closeB.png" alt="" /></div>
+                <!-- Start No Dealing adfs -->
+                                            <div class="topBanner clearfix wow pulse">
+<div><a href="https://hclo365.sharepoint.com/sites/COVID/SitePages/IfDevelops.aspx" onclick='HitLog(6823);'><img src="../Images/Extralarge/smallBanner_Header-Covengers.jpg" class="topBannerImg"/></a></div>
+                                            </div>
+                <div class="navigation">
+                    <div class="nav-wrapper">
+                        <div id="nav" role="navigation" class="navWrapper">
+                            <div class="navblock">
+                                <h2 class="block-title">
+                                    Navigation
+                                </h2>
+                                <ul class="firstLevelMenu">
+                                    <li><a href="/bprhome/Home/Index">Home</a></li>
+                                    <li>
+                                        <a href="javascript:void(0)" class="dropDown dd1">App Central <span></span></a>
+                                    </li>
+                                    <li>
+                                    </li>
+                                    <li><a href="/bprhome/Home/HrStudio" onclick="HitLog(32);">HR Studio</a></li>
+                                     </li>
+                                    <div class="menuCont menuContFull mm1">
+                                        <div id="parentHorizontalTab">
+                                            <a href="javascript:void(0)" class="menucloseBtn"></a>
+                                            <ul class="resp-tabs-list ver_1">
+                                                <li>Your Work</li>
+                                                
+                                                <div class="slideSub slideSubActive">Your Workplace</div>
+                                                <div class="slideOpen">
+                                                    <li>Services &amp; Products</li>
+                                                    <li>Industries</li>
+                                                    <li>Your Enablers at Work</li>
+                                                </div>
+
+                                                <li>Beyond Work</li>
+                                                
+
+                                                
+                                            </ul>
+                                            <div class="resp-tabs-container ver_1">
+                                                <div>
+                                                    <div id="ChildVerticalTab_2" class="ChildVerticalTab">
+                                                        <ul class="resp-tabs-list hor_2">
+                                                            <li>Global IT</li>
+
+                                                            <li>Delivery</li>
+                                                            <li>Sales &amp; Marketing</li>
+                                                            <li>Admin</li>
+                                                            <li>EIS</li>
+                                                            <li>Finance</li>
+                                                            <li>R&amp;C</li>
+							    <li>GPS (Procurement)</li>
+                                                        </ul>
+                                                        <div class="resp-tabs-container hor_2">
+                                                            <div>
+                                                                <ul class="in-link">
+        <li>
+           
+    <a href="https://Encrypt.hcl.com/selfservice">Bit Locker Self Service Recovery Portal</a>
+        </li>
+        <li>
+           
+    <a href="#" onclick="PopUpOpener('http://gitcloud.hcl.com','height=1000; width=890 ; resizeable=0');">
+        GIT Cloud
+    </a>
+        </li>
+        <li>
+           
+    <a href="#" onclick="PopUpOpener('https://kx.hcl.com/itis/','height=1000; width=890 ; resizeable=0');">
+        Global IT Services
+    </a>
+        </li>
+        <li>
+           
+    <a href="#" onclick="PopUpOpener('http://remedy.hcl.com','height=1000; width=890 ; resizeable=0');">
+        Remedy (to view old tickets created before Jul 11, 2018)
+    </a>
+        </li>
+        <li>
+           
+    <a href="#" onclick="PopUpOpener('https://wf5.myhcl.com/IMS/default.aspx','height=1000; width=890 ; resizeable=0');">
+        Security Incident Management
+    </a>
+        </li>
+        <li>
+           
+    <a href="https://globalit.hcl.com/selfserviceportal/">Self Service Portal</a>
+        </li>
+        <li>
+           
+    <a href="http://sx.hcl.com">ServiceXchange (For Opening IT Related Break-Fix, Service Requests)</a>
+        </li>
+        <li>
+           
+    <a href="https://wf4.myhcl.com/itham/Login.aspx">Verify My IT Assets (IT-HAM)</a>
+        </li>
+                                                                </ul>
+                                                            </div>
+
+                                                            <div>
+                                                                <ul class="in-link">
+        <li>
+           
+    <a href="https://wf24.myhcl.com/ACSAT_SMS/loginform.aspx">ACSAT Action Portal</a>
+        </li>
+        <li>
+           
+    <a href="https://wf30.myhcl.com/asmki/Home.aspx">ASM-KI</a>
+        </li>
+        <li>
+           
+    <a href="http://wiki.hcl.com/Sites/Asset�/default.aspx">ASSeT�</a>
+        </li>
+        <li>
+           
+    <a href="https://connectplus.hcl.com">Connect Plus</a>
+        </li>
+        <li>
+           
+    <a href="http://km.hcl.in/sites/CDO/CAG/CAG%20Secure%20Document/CAGMicrosite/index.htm">Customer Advocacy Group (CAG)</a>
+        </li>
+        <li>
+           
+    <a href="http://km.hcl.com/eeg">Engineering Excellence Group</a>
+        </li>
+        <li>
+           
+    <a href="https://hclo365.sharepoint.com/sites/EstimationWiki/SitePages/Home.aspx">Estimation Wiki Portal</a>
+        </li>
+        <li>
+           
+    <a href="../OtherFiles/Gotcha/Gotcha.htm">Gotcha</a>
+        </li>
+        <li>
+           
+    <a href="https://wf30.myhcl.com/EMF/Login.aspx">HCL LivE</a>
+        </li>
+        <li>
+           
+    <a href="http://km.hcl.in/sites/DeliveryAssurance/HCL%20LivE/SitePages/Home.aspx">HCL LivE Knowledge Portal</a>
+        </li>
+        <li>
+           
+    <a href="https://wf4.myhcl.com/hclcarespm/Login/Authentication.aspx?MPS=Y">HCLCare ( PCSAT )</a>
+        </li>
+        <li>
+           
+    <a href="https://ireflection.hclmtaas.com">i-Reflection</a>
+        </li>
+        <li>
+           
+    <a href="http://wf30.myhcl.com/iRFSInfra/default.aspx">Integrated Rolling Forecasting System (iRFS) Infra</a>
+        </li>
+        <li>
+           
+    <a href="https://wf5.myhcl.com/ifc/NewIndexPage.aspx?AppType=IFC">Internal Financial Controls(IFC)</a>
+        </li>
+        <li>
+           
+    <a href="http://km.hcl.com/sites/DeliveryAssurance/IGD-AE">Lean AE</a>
+        </li>
+        <li>
+           
+    <a href="https://wf4.myhcl.com/PQIAudit/?MPS=Y">LEAP (PCI Automation)</a>
+        </li>
+        <li>
+           
+    <a href="https://wf24.myhcl.com/LeapPQIReporting/PQIGraph/Home.aspx">LEAP(PCI Automation) Reporting</a>
+        </li>
+        <li>
+           
+    <a href="https://applications.hcl.com/monthlysummaryreport">Monthly Summary Report (Infra)</a>
+        </li>
+        <li>
+           
+    <a href="https://wf7.myhcl.com/BRQVS2015/login.aspx">My Billing Request System</a>
+        </li>
+        <li>
+           
+    <a href="#" onclick="PopUpOpener('https://www.myhcl.com/RAS/reports/rptMyProjectAssignation.aspx','height=900; width=400 ; resizeable=0');">
+        My Project Assignation
+    </a>
+        </li>
+        <li>
+           
+    <a href="https://10.98.40.72/maximo/webclient/login/login.jsp">MyAsset (Delivery IT Asset Management)</a>
+        </li>
+        <li>
+           
+    <a href="#" onclick="PopUpOpener('http://neon.myhcl.com/webdesktop','height=1000; width=890 ; resizeable=0');">
+        NeoN
+    </a>
+        </li>
+        <li>
+           
+    <a href="https://wf5.myhcl.com/OpsHi5/NewIndexPage.aspx?AppType=HI5!">Ops. HI 5! &amp; DEI (HCL-Infra)</a>
+        </li>
+        <li>
+           
+    <a href="#" onclick="PopUpOpener('https://pmsmart.hcl.com/pmsmart','height=1000; width=890 ; resizeable=0');">
+        PM Smart
+    </a>
+        </li>
+        <li>
+           
+    <a href="https://pmolive.hcl.com">PMO Live</a>
+        </li>
+        <li>
+           
+    <a href="https://wf28.myhcl.com/budgeting/login.aspx">Project Initiation &amp; Budgeting</a>
+        </li>
+        <li>
+           
+    <a href="http://proView.hcl.com">ProView (Infra)</a>
+        </li>
+        <li>
+           
+    <a href="https://qualitydiva.hcl.com/">Quality - OMS</a>
+        </li>
+        <li>
+           
+    <a href="https://reporthumanerror.hcl.com">Report Human Error</a>
+        </li>
+        <li>
+           
+    <a href="https://wf28.myhcl.com/RFS-Delivery/Login.aspx">Rolling Revenue Forecast System (RFS).</a>
+        </li>
+        <li>
+           
+    <a href="http://satori2.hcl.com">Satori</a>
+        </li>
+        <li>
+           
+    <a href="https://wf5.myhcl.com/ses/default.aspx">Service Experience (SE) � Customer Say System</a>
+        </li>
+        <li>
+           
+    <a href="https://wf6.myhcl.com/sms_api/Api/Login/ValidateUser">Stakeholder Management System</a>
+        </li>
+        <li>
+           
+    <a href="https://wf6.myhcl.com/spms/login/frmlogin.aspx">Sub-projects Management System</a>
+        </li>
+        <li>
+           
+    <a href="http://asmcoe.auto.hcl.com/ticketclassifier">Ticket Classifier</a>
+        </li>
+        <li>
+           
+    <a href="https://toolspage.hcl.com/Toolspage/default.aspx">Tools</a>
+        </li>
+        <li>
+           
+    <a href="http://kx.hcl.com/sites/TOS-Integrated-Dashboard/Pages/INFRA Dashboard.aspx">TOS INFRA Dashboard</a>
+        </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div>
+                                                                <ul class="in-link">
+        <li>
+           
+    <a href="https://wiki.hcl.com/sites/CentralBusinessMKT/AppsCCPortal/SitePages/Home.aspx">Apps Client Collateral Portal</a>
+        </li>
+        <li>
+           
+    <a href="https://wf6.myhcl.com/BookingClaim/Home.aspx">Booking Claim</a>
+        </li>
+        <li>
+           
+    <a href="https://wf5.myhcl.com/BCA/home">Booking Credit Allocation</a>
+        </li>
+        <li>
+           
+    <a href="https://salescentral.myhcl.com/discover/Default.aspx">Discover News</a>
+        </li>
+        <li>
+           
+    <a href="https://excalibur-hcl.my.salesforce.com">Excalibur</a>
+        </li>
+        <li>
+           
+    <a href="https://hcl.kapost.com/calendar/shared/591bde127ce3730012000d9b">Global Event Calendar</a>
+        </li>
+        <li>
+           
+    <a href="https://wf24.myhcl.com/Customerportal/Login.aspx">HCL Engage (Customer Portal)</a>
+        </li>
+        <li>
+           
+    <a href="https://wf30.myhcl.com/HCLEngage/">HCL Engage Admin</a>
+        </li>
+        <li>
+           
+    <a href="https://wf6.myhcl.com/HCLLeadGen/">LeadGen</a>
+        </li>
+        <li>
+           
+    <a href="http://microsite.hcltech.com/madjam">MAD JAM 6</a>
+        </li>
+        <li>
+           
+    <a href="https://wf4.myhcl.com/MOIS/Login/formLogin.aspx">My Operational Info � Sales</a>
+        </li>
+        <li>
+           
+    <a href="#" onclick="PopUpOpener('https://wf30.myhcl.com/SAML2Response/default.aspx','height=1000; width=890 ; resizeable=0');">
+        OptiMus � Marketing Automation
+    </a>
+        </li>
+        <li>
+           
+    <a href="https://wiki.hcl.com/refmgt/default.aspx">Reference Management System (for Sales)</a>
+        </li>
+        <li>
+           
+    <a href="https://wf6.myhcl.com/SalesBonus/Forms/Default.aspx">Sales Bonus</a>
+        </li>
+        <li>
+           
+    <a href="https://salescentral.myhcl.com/pages/?utm_source=myhcl&amp;utm_medium=web&amp;utm_campaign=myhcl_sc">Sales Central</a>
+        </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div>
+                                                                <ul class="in-link">
+        <li>
+           
+    <a href="http://wf30.myhcl.com/AccessRequest/AccessControlLogin/Login">Access Card Rights Management</a>
+        </li>
+        <li>
+           
+    <a href="http://wf30.myhcl.com/AdminAsset/Login/Login">Admin Asset Issuance</a>
+        </li>
+        <li>
+           
+    <a href="https://transportal.myhcl.com/TransportalAzureSSO/TransportalLogin.aspx?TYPE=CAS">Cab Approval System</a>
+        </li>
+        <li>
+           
+    <a href="http://wf30.myhcl.com/CVM/Login/Login">Client Visit Management</a>
+        </li>
+        <li>
+           
+    <a href="https://hclo365.sharepoint.com/sites/ConcallBookingSystem">ConCall Booking System</a>
+        </li>
+        <li>
+           
+    <a href="https://hclo365.sharepoint.com/sites/GlobalWorkPlaceSolution">Global Workplace Solution Portal</a>
+        </li>
+        <li>
+           
+    <a href="https://wf30.myhcl.com/IMSHS/">Incident Occupational Health &amp; safety and Environment</a>
+        </li>
+        <li>
+           
+    <a href="http://wf30.myhcl.com/ManageCarbon/Login/Login">Manage Carbon</a>
+        </li>
+        <li>
+           
+    <a href="https://wf5.myhcl.com/MRA/account/login.aspx">Meeting Room Booking (MRB)</a>
+        </li>
+        <li>
+           
+    <a href="https://wf5.myhcl.com/tasn/intermediatepage.aspx">My Travel (TAS)</a>
+        </li>
+        <li>
+           
+    <a href="https://wf5.myhcl.com/SBS/">Seat Booking System(GEOs)</a>
+        </li>
+        <li>
+           
+    <a href="https://wf4.myhcl.com/Validateseatcode/apphome.aspx">Seating Management</a>
+        </li>
+        <li>
+           
+    <a href="http://wf30.myhcl.com/StationaryManagement/Login/Login">Stationary Management System</a>
+        </li>
+        <li>
+           
+    <a href="https://transportal.myhcl.com/TransportalAzureSSO/TransportalLogin.aspx">Transportal</a>
+        </li>
+        <li>
+           
+    <a href="https://transportal.myhcl.com/TransportalAzureSSO/TransportalLogin.aspx">Transportal</a>
+        </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div>
+                                                                <ul class="in-link">
+        <li>
+           
+    <a href="https://wf6.myhcl.com/AMS/login.aspx?p=myhcl">Application Access Management</a>
+        </li>
+        <li>
+           
+    <a href="https://hcltechnologieslimited-prod.saas.appdynamics.com">Application Performance Management (APM) Tool</a>
+        </li>
+        <li>
+           
+    <a href="https://wf5.myhcl.com/goMobile/Index.html">BeDigital</a>
+        </li>
+        <li>
+           
+    <a href="https://wf4.myhcl.com/njf/CFA/dashboard.aspx">Centralized Feedback Dashboard</a>
+        </li>
+        <li>
+           
+    <a href="https://dashboard.hcl.com">Digital Analytics</a>
+        </li>
+        <li>
+           
+    <a href="https://hclo365.sharepoint.com/sites/DISCOVERHCL/">DISCOVER HCL</a>
+        </li>
+        <li>
+           
+    <a href="https://bedigital.myhcl.com/CEOWebPortal/default.aspx">Done!</a>
+        </li>
+        <li>
+           
+    <a href="HTTP://wf13.myhcl.com/sites/myhcl/bpr/default.aspx">EIS Repository</a>
+        </li>
+        <li>
+           
+    <a href="https://wf5.myhcl.com/GoMobile/Index.html#ourApplications">Go-Mobile!</a>
+        </li>
+        <li>
+           
+    <a href="#" onclick="PopUpOpener('http://sap.hcl.com/irj/','height=1000; width=890 ; resizeable=0');">
+        SAP Enterprise Portal
+    </a>
+        </li>
+        <li>
+           
+    <a href="#" onclick="PopUpOpener('http://grcprd.hcl.com/irj/portal','height=1000; width=890 ; resizeable=0');">
+        SAP GRC Access &amp; Process Control
+    </a>
+        </li>
+        <li>
+           
+    <a href="https://wf30.myhcl.com/SSDEDS/Home/index">Smart Service Desk (SSD)</a>
+        </li>
+        <li>
+           
+    <a href="http://tools.hcl.com/tool/">TARMAC</a>
+        </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div>
+                                                                <ul class="in-link">
+        <li>
+           
+    <a href="https://wf4.myhcl.com/BIConnect/Login/frmLogin.aspx">BI Connect</a>
+        </li>
+        <li>
+           
+    <a href="#" onclick="PopUpOpener('https://wf30.myhcl.com/cat/ScorpCCGLogin.aspx','height=1000; width=890 ; resizeable=0');">
+        CCG-CAT
+    </a>
+        </li>
+        <li>
+           
+    <a href="http://10.99.21.98/CMS_FIN">Compliance Management System</a>
+        </li>
+        <li>
+           
+    <a href="http://wf30.myhcl.com/CLM/">Contract LifeCycle Management (CLM)</a>
+        </li>
+        <li>
+           
+    <a href="http://wf13.myhcl.com/sites/cms/default.aspx">Contract Repository</a>
+        </li>
+        <li>
+           
+    <a href="https://wf6.myhcl.com/Medical/PF_Form35.aspx">Covid-19 PF Withdrawal</a>
+        </li>
+        <li>
+           
+    <a href="http://wf30.myhcl.com/EMDTool/Login/Login/">EMD Tool</a>
+        </li>
+        <li>
+           
+    <a href="https://wf4.myhcl.com/FinanceCentral/Login/frmLogin.aspx">Finance Central</a>
+        </li>
+        <li>
+           
+    <a href="https://hclo365.sharepoint.com/Sites/finconnect/">Finance Connect</a>
+        </li>
+        <li>
+           
+    <a href="https://wf6.myhcl.com/FoodWallet/EmployeeDeclaration.aspx">Food Wallet Portal</a>
+        </li>
+        <li>
+           
+    <a href="http://wf30.myhcl.com/AutomationPF/Login/Login">FSS Automations</a>
+        </li>
+        <li>
+           
+    <a href="https://wf30.myhcl.com/FinanceAutomation/Login/Index">GBO Finance Automation</a>
+        </li>
+        <li>
+           
+    <a href="https://wf5.myhcl.com/cashvoucherclaim/CVCS_MAINHOME.aspx">Global Claims System</a>
+        </li>
+        <li>
+           
+    <a href="http://legatrix.myhcl.com/legatrix">HCL Compliance Management Portal</a>
+        </li>
+        <li>
+           
+    <a href="https://wf24.myhcl.com/IBCM/Login/">Intra Business Comparative Matrix(IBCM)</a>
+        </li>
+        <li>
+           
+    <a href="https://wf5.myhcl.com/itdeclaration/webforms/EmpItDeclaration.aspx">IT Declaration</a>
+        </li>
+        <li>
+           
+    <a href="https://wf4.myhcl.com/lta/webforms/LTAHomePage.aspx">LTA Application</a>
+        </li>
+        <li>
+           
+    <a href="http://wf13.myhcl.com/sites/MDA/SitePages/MDA_HOME.aspx">Marine Declaration for Insurance</a>
+        </li>
+        <li>
+           
+    <a href="https://wf28.myhcl.com/BRQVS2015/login.aspx">My Billing request System- Alternate Link</a>
+        </li>
+        <li>
+           
+    <a href="https://hclo365.sharepoint.com/sites/MyDealPortal/Templates/Forms/AllItems.aspx?id=%2Fsites%2FMyDealPortal%2FTemplates%2FLatest%20Template%2FUser%20Master%20Template&amp;newTargetListUrl=%2Fsites%2FMyDealPortal%2FTemplates&amp;viewpath=%2Fsites%2FMyDealPortal%2FTemplates%2FForms%2FAllItems%2Easpx">My Deal</a>
+        </li>
+        <li>
+           
+    <a href="https://wf6.myhcl.com/Flexi/frmMyFlexiDeclarations.aspx">My Flexi Declaration/ Flexible compensation</a>
+        </li>
+        <li>
+           
+    <a href="https://wf6.myhcl.com/NPS/">National Pension System (NPS) Portal</a>
+        </li>
+        <li>
+           
+    <a href="https://wf5.myhcl.com/OBP/E2E/E2ELogin.aspx">Order Book Plan</a>
+        </li>
+        <li>
+           
+    <a href="https://wf30.myhcl.com/PaymentModule/">Payment Module</a>
+        </li>
+        <li>
+           
+    <a href="http://wf30.myhcl.com/PFPortalPF/Login/Login">PF Portal</a>
+        </li>
+        <li>
+           
+    <a href="https://secureapps.hcl.com/sites/smartdeal">Smart Deal</a>
+        </li>
+        <li>
+           
+    <a href="https://secureapps.hcl.com/sites/SmartDealtool/SitePages/Home.aspx">Smart Deal V2</a>
+        </li>
+        <li>
+           
+    <a href="https://apps.linkintime.co.in/trackin/#">TRACKIN</a>
+        </li>
+        <li>
+           
+    <a href="http://wf6.myhcl.com/vehicledecl/">Vehicle Declaration</a>
+        </li>
+        <li>
+           
+    <a href="http://vmmtool.hcl.com">Vendor Master Management Tool</a>
+        </li>
+        <li>
+           
+    <a href="http://wf6.myhcl.com/vendportal/login.aspx">Vendor Portal</a>
+        </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div>
+                                                                <ul class="in-link">
+        <li>
+           
+    <a href="https://hclo365.sharepoint.com/sites/RiskComp/Shared%20Documents/index.aspx">Risk &amp; Compliance</a>
+        </li>
+        <li>
+           
+    <a href="https://hclo365.sharepoint.com/sites/CyberSecure/SitePages/Cyber%20Secure.aspx">Staying CyberSecure</a>
+        </li>
+                                                                </ul>
+                                                            </div>
+
+							<div>
+								<ul class="in-link">
+        <li>
+           
+    <a href="https://wf6.myhcl.com/capex/webpages/login.aspx">CAPEX-OPEX (for indents raised before 29th July 2019 only)</a>
+        </li>
+        <li>
+           
+    <a href="http://hcl.procurement.ariba.com/">myProcure (for indents raised on or after 29th July 2019 only)</a>
+        </li>
+        <li>
+           
+    <a href="https://my-quote.mybluemix.net">myQuote</a>
+        </li>
+        <li>
+           
+    <a href="https://wf5.myhcl.com/Policyhub/home/GoInner?PolicyPage=JU0qVFPHwkc=">Procurement Policy Document</a>
+        </li>
+        <li>
+           
+    <a href="https://wf5.myhcl.com/TPSOW/SOWOperations/SOWRMView?Source=RM">SOW</a>
+        </li>
+        <li>
+           
+    <a href="https://wf24.myhcl.com/VDTWeb/login">Vendor Delivery Tracking</a>
+        </li>
+								</ul>
+							</div> 
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div id="ChildVerticalTab_3" class="ChildVerticalTab">
+                                                        <ul class="resp-tabs-list hor_3">
+                                                            
+
+                                                            
+                                                            
+                                                            <li>Mode 1</li>
+                                                            <li>Mode 2</li>
+                                                            <li>Mode 3</li>
+                                                        </ul>
+                                                        <div class="resp-tabs-container hor_3">
+                                                            <div>
+                                                                <ul class="in-link">
+                                                                    
+        <li>
+           
+    <a href="https://www.hcltech.com/systems-integration">Applications</a>
+        </li>
+        <li>
+           
+    <a href="https://www.hcltech.com/business-process-outsourcing-bpo">Business Process</a>
+        </li>
+        <li>
+           
+    <a href="https://www.hcltech.com/engineering-rd-services">Engineering</a>
+        </li>
+        <li>
+           
+    <a href="https://www.hcltech.com/it-infrastructure-management-services#solutions">Infrastructure</a>
+        </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div>
+                                                                <ul class="in-link">
+                                                                    
+        <li>
+           
+    <a href="https://www.hcltech.com/cloud">Cloud Native Services</a>
+        </li>
+        <li>
+           
+    <a href="https://www.hcltech.com/cyber-security-grc-services">Cybersecurity &amp; GRC</a>
+        </li>
+        <li>
+           
+    <a href="https://www.hcltech.com/digital-analytics-services">Digital &amp; Analytics</a>
+        </li>
+        <li>
+           
+    <a href="https://www.hcltech.com/enterprise-studio">Enterprise Studio</a>
+        </li>
+        <li>
+           
+    <a href="https://www.hcltech.com/Internet-of-Things-IoT">IoT WoRKS�</a>
+        </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div>
+                                                                <ul class="in-link">
+                                                                    
+        <li>
+           
+    <a href="https://www.hcltech.com/autonomics-and-orchestration">DRYiCE Products</a>
+        </li>
+        <li>
+           
+    <a href="https://www.hcltech.com/products-and-platforms">Products &amp; Platforms</a>
+        </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div>
+                                                    <div class="ltdLinkCont">
+                                                        <ul class="in-link">
+        <li>
+           
+    <a href="https://www.hcltech.com/aerospace-and-defense">Aerospace &amp; Defence</a>
+        </li>
+        <li>
+           
+    <a href="https://www.hcltech.com/automotive">Automotive</a>
+        </li>
+        <li>
+           
+    <a href="https://www.hcltech.com/financial-services/retail-corporate-banking">Banking</a>
+        </li>
+        <li>
+           
+    <a href="https://www.hcltech.com/financial-services/capital-market-services">Capital Markets</a>
+        </li>
+        <li>
+           
+    <a href="https://www.hcltech.com/manufacturing/chemical-and-process-industries">Chemical &amp; Process Industries</a>
+        </li>
+        <li>
+           
+    <a href="https://www.hcltech.com/consumer-goods">Consumer Goods</a>
+        </li>
+        <li>
+           
+    <a href="https://www.hcltech.com/energy-and-utilities">Energy &amp; Utilities</a>
+        </li>
+        <li>
+           
+    <a href="https://www.hcltech.com/healthcare-services">Healthcare</a>
+        </li>
+        <li>
+           
+    <a href="https://www.hcltech.com/manufacturing/hitech">Hi-Tech</a>
+        </li>
+        <li>
+           
+    <a href="https://www.hcltech.com/industrial-manufacturing">Industrial Manufaturing</a>
+        </li>
+        <li>
+           
+    <a href="https://www.hcltech.com/financial-services/insurance-services">Insurance</a>
+        </li>
+        <li>
+           
+    <a href="https://www.hcltech.com/life-sciences-services">Life Sciences</a>
+        </li>
+        <li>
+           
+    <a href="https://www.hcltech.com/manufacturing">Manufacturing Industries</a>
+        </li>
+        <li>
+           
+    <a href="https://www.hcltech.com/media-entertainment">Media and Entertainment</a>
+        </li>
+        <li>
+           
+    <a href="https://www.hcltech.com/mining-and-natural-resources">Mining &amp; Natural Resources</a>
+        </li>
+        <li>
+           
+    <a href="https://www.hcltech.com/oil-and-gas">Oil &amp; Gas</a>
+        </li>
+        <li>
+           
+    <a href="https://www.hcltech.com/retail-services">Retail</a>
+        </li>
+        <li>
+           
+    <a href="https://www.hcltech.com/telecom">Telecom</a>
+        </li>
+        <li>
+           
+    <a href="https://www.hcltech.com/travel-transportation-logistics-and-hospitality">Travel, Transportation, Logistics &amp; Hospitality</a>
+        </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="ltdLinkCont">
+                                                        <ul class="in-link">
+        <li>
+           
+    <a href="https://hclo365.sharepoint.com/sites/btis/SitePages/Home.aspx">BTIS</a>
+        </li>
+        <li>
+           
+    <a href="http:\\code.hcltech.com">CODE</a>
+        </li>
+        <li>
+           
+    <a href="https://code.hcltech.com/CodeInsights/Home.aspx">CodeInsights</a>
+        </li>
+        <li>
+           
+    <a href="http://kx.hcl.com/sites/Global-Compliance">Global Compliance Portal</a>
+        </li>
+        <li>
+           
+    <a href="https://hclo365.sharepoint.com/sites/PortalTest/Shared%252520Documents/General">Global Privacy Office</a>
+        </li>
+        <li>
+           
+    <a href="https://www.myhcl.com/SSOMidway/SAML/SAMLSSOService.aspx?AppName=TVMProd&amp;RedVal=Default">HCL eGRC TVM</a>
+        </li>
+        <li>
+           
+    <a href="http://www.hcltech.com/geo-presence">HCL Locations</a>
+        </li>
+        <li>
+           
+    <a href="https://hclo365.sharepoint.com/sites/btis/InfoSec/ISA/NewDocuments/Forms/AllItems.aspx">Infosec Portal</a>
+        </li>
+        <li>
+           
+    <a href="http://www.hcltech.com/about-us/leadership">Leaders</a>
+        </li>
+        <li>
+           
+    <a href="https://hclo365.sharepoint.com/sites/touchpoint">SAP</a>
+        </li>
+        <li>
+           
+    <a href="http://km.hcl.com/sites/TradeCompliance/SitePages/Home.aspx">Trade Compliance Portal</a>
+        </li>
+        <li>
+           
+    <a href="https://wf5.myhcl.com/udayapp/">UDAY Partner Management</a>
+        </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div>
+                                                    <div class="ltdLinkCont">
+                                                        <ul class="in-link">
+        <li>
+           
+    <a href="#" onclick="PopUpOpener('https://www.hcltech.com/about-us/awards-recognitions','height=1000; width=890 ; resizeable=0');">
+        Awards and Recognitions
+    </a>
+        </li>
+        <li>
+           
+    <a href="https://wf30.myhcl.com/Blueprint_FY_17_18/">Blueprint FY17-18</a>
+        </li>
+        <li>
+           
+    <a href="https://wf30.myhcl.com/Blueprint_FY_18_19/">Blueprint FY18-19</a>
+        </li>
+        <li>
+           
+    <a href="https://wf30.myhcl.com/Blueprint_FY_19_20/">Blueprint FY19-20</a>
+        </li>
+        <li>
+           
+    <a href="../OtherFiles/Contact Us.htm">Contact Us</a>
+        </li>
+        <li>
+           
+    <a href="https://privacyportal-cdn.onetrust.com/dsarwebform/e6f861c2-bc36-46aa-98ad-c91460eda2a6/6a39062a-2150-4976-b4ec-09729b915277.html">Data Subject Request Portal</a>
+        </li>
+        <li>
+           
+    <a href="#" onclick="PopUpOpener('../OtherFiles/EmergencyHelpline/24x7helpline.htm','height=1000; width=890 ; resizeable=0');">
+        Emergency Helpline
+    </a>
+        </li>
+        <li>
+           
+    <a href="http://wf13.myhcl.com/sites/EFZ/FrontEnd/Index.aspx">Employees First Zone</a>
+        </li>
+        <li>
+           
+    <a href="https://benefitbox.hcl.com">HCL Benefit Box</a>
+        </li>
+        <li>
+           
+    <a href="http://www.hcl.in">HCL Enterprise</a>
+        </li>
+        <li>
+           
+    <a href="http://www.hcltech.com">HCL Tech</a>
+        </li>
+        <li>
+           
+    <a href="https://wf6.myhcl.com/hcltodaytechsso/frontend/v_login.aspx">HCL Today</a>
+        </li>
+        <li>
+           
+    <a href="https://mail.hcl.com">HCL Web Mail</a>
+        </li>
+        <li>
+           
+    <a href="#" onclick="PopUpOpener('https://wf13.myhcl.com/sites/myhcl/bprconnect/HolidayCalendar/Holiday%20Calendar%202019.xlsx?Web=1','height=0; width=0 ; resizeable=0');">
+        Holiday Calendar 2019
+    </a>
+        </li>
+        <li>
+           
+    <a href="https://wf13.myhcl.com/sites/myhcl/bprconnect/HolidayCalendar/Holiday%20Calendar%202020.xlsx?Web=1">Holiday Calendar 2020</a>
+        </li>
+        <li>
+           
+    <a href="https://hclo365.sharepoint.com/sites/ifly/">I-fly</a>
+        </li>
+        <li>
+           
+    <a href="https://app.talview.com">iConnect</a>
+        </li>
+        <li>
+           
+    <a href="https://hclo365.sharepoint.com/sites/HCL_Ideapreneurship/">Ideapreneurship</a>
+        </li>
+        <li>
+           
+    <a href="https://microsite.hcltech.com/IPM/">IPM</a>
+        </li>
+        <li>
+           
+    <a href="https://wf5.myhcl.com/rbtc/otherfiles/index.html">Relationship Beyond the Contract</a>
+        </li>
+        <li>
+           
+    <a href="https://wf6.myhcl.com/ServiceAgreementPortal/RoleAccess.aspx?Mode=C6zIck51rf6v+9xKV9f9Bg==">Service Agreement</a>
+        </li>
+        <li>
+           
+    <a href="http://www.straighttalkonline.com">Straight Talk Online</a>
+        </li>
+        <li>
+           
+    <a href="https://microsite.hcltech.com/Ultimateideapreneur/">Ultimate Ideapreneur</a>
+        </li>
+        <li>
+           
+    <a href="https://wf5.myhcl.com/ValueCreationPortal/account/login">Value Creation Portal</a>
+        </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                
+                                                
+                                                
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <li><a href="https://salescentral.myhcl.com/pages/?utm_source=myhcl&utm_medium=web&utm_campaign=myhcl_sc" target='_blank'>Sales Central</a></li>
+                                    <li><a href="https://salescentral.myhcl.com/pages/sea-institute/Default.aspx?utm_source=myhcl&utm_medium=web&utm_campaign=myhcl_sea" target='_blank'>SEA Institute</a></li>
+                                    <li>
+                                        <a href="#" class="dropDown dd2">My Favorites <span></span></a>
+                                        <div class="menuCont mm2" id="FavoritesSectionDiv">
+
+
+ <ul class="sub-menu">
+        <li>
+           
+    <a href="https://wf30.myhcl.com/LMS/">India LMS</a>
+        </li>
+ </ul>                                            <ul class="sub-menu-edit">
+                                                <li>
+                                                    <a href="#" onclick="favOnCLick()">
+                                                        Edit Favorites <span class="edit-btn">
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="dropDown dd3">Guidelines <span></span></a>
+                                        <div class="menuCont mm3">
+                                            <ul class="sub-menu">
+        <li>
+           
+    <a href="../webpages/brand.aspx">Brand Guidelines</a>
+        </li>
+        <li>
+           
+    <a href="https://www.myhcl.com/bprhome/MyOrg_Others/ICGuidelines/IC-Guidelines.html">IC Guidelines</a>
+        </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <!--<li><a href="../IntroducingNewMyHCL.html" target='_blank'>Introducing New My HCL</a></li>-->
+                                    <li><a href="https://meme.hcl.com" target='_blank'>MEME</a></li>
+
+                                    <li><a href="http://wf4.myhcl.com/powerofone/PowerOfOne.aspx" target='_blank'>Power of One</a></li>
+					<li><a href="https://wf5.myhcl.com/hclleap/employee/login.aspx" target='_blank'>Job Postings</a></li>
+                    <li><a href="https://benefitbox.hcl.com" target='_blank' class="common_app_link" onclick="HitLog(6953);">Benefit Box</a></li>
+					<li class="COV"><a href="https://hclo365.sharepoint.com/sites/COVID/SitePages/TakeCareHCL.aspx" target='_blank'>COVID-19</a></li>
+<li><a href="https://wf24.myhcl.com/EmployeeHealth/landing.aspx" target='_blank'>Update Health Status</a></li>
+                                    
+                                    
+                                </ul>
+                                <a class="close-btn" id="nav-close-btn" href="#top">Return to Content</a>
+                            </div>
+                        </div>
+                        <div class="clear">
+                        </div>
+                    </div>
+                </div>
+                
+<script type="text/javascript">
+    
+    function ViewAllPoll() {
+        //        $('#viewAll').show();
+        var w = 730;
+        var h = 450;
+        var left = (screen.width / 2) - (w / 2);
+        var top = (screen.height / 2) - (h / 2);
+        return window.open('../Webpages/HomeAllPoll.aspx', 'mywindow', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=no, copyhistory=no, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
+
+    }
+    
+    $(document).ready(function () {
+
+        //loadChart();
+
+//setTimeout(function () { $('#ezine').click(); }, 500);
+
+
+        $("#btnclick").click(function (e) {
+
+            var pollques = $('#PollQutin').find('input:checked').val();
+
+            if ($('#PollQutin').find('input:checked').val() == null) {
+                alert('Please select an answer to submit.');
+            } else {
+                var pollId = $('#PollId').val();
+                var pollques = pollques;
+
+                //alert('pollId : ' + pollId + " pollques: " + pollques);
+
+                $.get(
+             '/bprhome/Home/SubmitPoll',
+             { pollId: pollId, pollques: pollques },
+             function (data) {
+                 $('#OpinionPollSection').html(data);
+                 loadChart();
+             }
+          );
+            }
+        });
+    });
+</script>
+<script type="text/javascript">
+    function viewMoreResults() {
+        PopupCenter('HomeAllPoll.aspx', 'mywindow', 730, 460);
+        return false;
+    }
+    function PopupCenter(pageURL, title, w, h) {
+        var left = (screen.width / 2) - (w / 2);
+        var top = (screen.height / 2) - (h / 2);
+        var targetWin = window.open(pageURL, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=no, copyhistory=no, width=' + w + ', height=' + h);
+    }
+</script>
+
+<script type="text/javascript">
+        var globaldata;
+        $(document).ready(function () {
+            //if (/index#undefined3/.test(window.location.href)) {
+            //    geteventsdata(); // getEvents();
+            //}
+            //if (/Index#undefined3/.test(window.location.href)) {
+            //    geteventsdata(); // getEvents();
+            //}
+            //$('body').on('click', 'h2.resp-accordion.hor_1.resp-tab-active', function () {
+            //    if ($(this).text() == "Events") {
+            //        // alert('hi');
+            //        geteventsdata(); // getEvents();
+            //    }
+            //});
+        });
+
+        function geteventsdata() {
+            if (globaldata == null || globaldata == "undefined") {
+                $.ajax({
+                    url: '/bprhome/Home/GetEvents',
+                    type: 'POST',
+                    data: {}
+                }).done(function (result) {
+                    debugger;
+                    globaldata = result;
+                    $('#bootstrapModalFullCalendar').fullCalendar({
+                        header: {
+                            left: '',
+                            center: 'prev title next',
+                            right: ''
+                        },
+
+                        eventClick: function (event, jsEvent, view) {
+                            $("#eventInfo").html(event.description);
+                            $("#eventLink").attr('href', event.url);
+                            $("#eventContent").dialog({
+                                modal: true,
+                                title: event.title
+                            });
+                            return false;
+                        },
+                        events: result //'../Home/GetEvents/'
+                    });
+                });
+            }
+            //        else {
+            //            $('#bootstrapModalFullCalendar').fullCalendar({
+            //                header: {
+            //                    left: '',
+            //                    center: 'prev title next',
+            //                    right: ''
+            //                },
+
+            //                eventClick: function (event, jsEvent, view) {
+            //                    $("#eventInfo").html(event.description);
+            //                    $("#eventLink").attr('href', event.url);
+            //                    $("#eventContent").dialog({
+            //                        modal: true,
+            //                        title: event.title
+            //                    });
+            //                    return false;
+            //                },
+            //                events: '../Home/GetEvents/'
+            //            });
+            //        }
+        }
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        //if (/index#undefined2/.test(window.location.href)) {
+        //    Getinpicturedata();
+        //}
+        //if (/Index#undefined2/.test(window.location.href)) {
+        //    Getinpicturedata();
+        //}
+        //$('body').on('click', 'h2.resp-accordion.hor_1.resp-tab-active', function () {
+        //    if ($(this).text() == "In Pictures") {
+        //        Getinpicturedata();
+        //    }
+        //});
+        //$('#picture').click(function () {
+        //    Getinpicturedata();
+        //});
+
+    });
+    function Getinpicturedata() {
+        if ($('#InpictureContainer').is(':empty')) {
+            $.get('/bprhome/Home/Getinpicture', function (data) {
+                $('#InpictureContainer').html(data);
+            });
+        }
+    }
+
+</script>
+
+
+<div class="content-area clearfix wrapperIn flexPad">
+    <div class="lftCont">
+<script language="javascript" type="text/javascript">
+    function popUpWindowFun(url, height, width) {
+        window.open(url, '_blank');
+    }
+    function TestscrollTo(ancharObj) {
+
+        var UlObj = $(ancharObj).parent().parent();
+        var allList = $(UlObj).find('li');
+        var allAncharList = $(allList).find('a');
+        $.each(allAncharList, function () {
+            $(this).removeClass("ancharTextChangeOnMouseOver");
+            $(this).removeClass("ancharTextChangeOnMouseOut");
+        });
+        $(ancharObj).addClass("ancharTextChangeOnMouseOver");
+    }
+
+    function mouseOutFun(ancharObj) {
+        $(ancharObj).removeClass("ancharTextChangeOnMouseOver");
+        $(ancharObj).addClass("ancharTextChangeOnMouseOut");
+    } 
+
+    
+function AddToFavoriteFun(ColumnId, AppName, url) {
+        $.get(
+             '/bprhome/Home/AddToSingleFavorite',
+             { appColumnId: ColumnId, appName: AppName, appUrl: url }, //,appName:AppName,appUrl:url
+             function (data) {
+                //Added by Ashok Dhaundiyal on 29/ Aug/ 2016 for Edit favorites
+                 var str1 = "<ul class='sub-menu-edit'><li><a href='#' onclick='favOnCLick()'>Edit Favorites <span class='edit-btn'></span></a></li></ul>";
+                 data = data.concat(str1);                 
+                 $('#FavoritesSectionDiv').html(data);
+                 alert("Application successfully added to favorites.");
+             }
+          );
+    }
+
+
+    function autoComplete() {
+
+        var srn_resolution = document.getElementById('hddScrnResln').value;//rana
+        var browserversion = document.getElementById('hddbrowserversion').value;//mr
+      //  alert("a" + browserversion);
+        $.ajaxSetup({ cache: false });
+        var path = '/bprhome/Home/GetSearchAppDetails?searchstring=ApplicationList&amp;resolution=Na&amp;browserversion=Na';
+        $("#txtSearch").autocomplete({
+            minLength: 3,
+            disabled: false,
+            source: function (request, response) {
+	    if (document.getElementById('HF_AppSearch').value == "AppSearch") {//manju
+                $.ajax({
+                    type: 'POST',
+                    url: path.replace("ApplicationList", request.term),
+                    dataType: "json",
+                    data: {// q: request.term ,//rana
+                        'searchstring': request.term,
+                        'resolution': srn_resolution,
+                        'browserversion': browserversion
+                    },//rana},
+                    success: function (data) {
+                        var respData = jQuery.map(data, function (item) {
+                            return {
+                                url: item.AppUrl,
+                                value: item.AppName,
+                                clickEventType: item.ClickEventType,
+                                isActive: item.ISActive,
+                                isVisible: item.Visible,
+                                isEnable: item.Enabled,
+                                isFavorite: item.Favorites,
+                                masterColumnHeader: item.MasterCategory,
+                                countTotalFavorites: item.CountFavorites,
+                                appColumnId: item.ColumnId
+                            }
+                        });
+
+                        if ($(respData).size() > 0) {
+                            response(respData)
+                        }
+                    },
+                    error: function () {
+
+                    }
+                });
+	     }//manju
+
+            }, open: function (event, ui) {
+                $(".ui-autocomplete li.ui-menu-item:odd  > table").css("background-color", "none"); //"#EAE7E7"
+            }
+            , select: function (event, ui) {
+
+            }
+        }).data("ui-autocomplete")._renderItem = function (ul, item) {
+            var toReplace = "thh";
+            //debugger;
+            if (item.value != 'No Record Found') {
+                var imgStyle = "border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px;float:right;display:block;";
+                //var hrefUrl = "cursor:pointer;float:left;width:180px;";
+                var colSpanNo = '';
+
+                var hrefUrl = "<table width='100%' class='hoverTable'><tr>";
+                var appName = toReplace + item.value + toReplace;
+                var appUrl = toReplace + item.url + toReplace;
+                var ImgTag = "<input name='imhh' title='Add To Favorites' class='ImgAutoFavorite mainIMG favorite_add' id='imgbATF' onclick='AddToFavoriteFun(" + item.appColumnId + "," + appName.replace(/thh/g, '"') + "," + appUrl.replace(/thh/g, '"') + ");' type='image' src='../Images/trans.gif'/> ";
+                colSpanNo = "";
+                if (item.clickEventType.match("^POP")) {
+                    var PopUpValues = new Array();
+                    PopUpValues = item.clickEventType.split('_');
+
+                    if (PopUpValues[1] == "0" && PopUpValues[2] == "0") {
+                        if (item.countTotalFavorites < 10) {
+                            if (item.isFavorite === 0) {
+                                hrefUrl = hrefUrl + "<td style='width:97%'> <a onMouseover='TestscrollTo(this);' onMouseout='mouseOutFun(this);'";
+                                hrefUrl = hrefUrl + " " + "class='AutoStyleAnchor' target='_blank' href='" + item.url + "' style='width:97%'>" + item.value + "</a></td>";
+                                hrefUrl = hrefUrl + "<td>" + ImgTag + "</td></tr></table>";
+                            }
+                            else {
+                                hrefUrl = hrefUrl + "<td style='width:100%'> <a onMouseover='TestscrollTo(this);' onMouseout='mouseOutFun(this);'";
+                                hrefUrl = hrefUrl + " " + "class='AutoStyleAnchorWithoutImg' target='_blank' href='" + item.url + "'>" + item.value + "</a></td></tr></table>";
+                            }
+                        }
+                        else {
+                            hrefUrl = hrefUrl + "<td style='width:inherit !important;'> <a onMouseover='TestscrollTo(this);' onMouseout='mouseOutFun(this);'";
+                            hrefUrl = hrefUrl + " " + "class='AutoStyleAnchorWithoutImg' target='_blank' href='" + item.url + "'>" + item.value + "</a></td></tr></table>";
+                        }
+                    }
+                    else {
+                        if (item.countTotalFavorites < 10) {
+                            if (item.isFavorite === 0) {
+                                var popUpFun = toReplace + "popUpWindowFun( '" + item.url + "','" + PopUpValues[1] + "','" + PopUpValues[2] + "');" + toReplace;
+                                hrefUrl = hrefUrl + "<td style='width:97%'> <a onMouseover='TestscrollTo(this);' onMouseout='mouseOutFun(this);'";
+                                hrefUrl = hrefUrl + " " + "class='AutoStyleAnchor' href='#' onclick=" + popUpFun.replace(/thh/g, '"') + " style='width:97%'>" + item.value + "</a></td>";
+                                hrefUrl = hrefUrl + "<td>" + ImgTag + "</td></tr></table>";
+                            }
+                            else {
+                                var popUpFun = toReplace + "popUpWindowFun( '" + item.url + "','" + PopUpValues[1] + "','" + PopUpValues[2] + "');" + toReplace;
+                                hrefUrl = hrefUrl + "<td> <a onMouseover='TestscrollTo(this);' onMouseout='mouseOutFun(this);'";
+                                hrefUrl = hrefUrl + " " + "class='AutoStyleAnchorWithoutImg' href='#' onclick=" + popUpFun.replace(/thh/g, '"') + " >" + item.value + "</a>";
+                                hrefUrl = hrefUrl + "</td></tr></table>";
+                            }
+                        }
+                        else {
+                            var popUpFun = toReplace + "popUpWindowFun( '" + item.url + "','" + PopUpValues[1] + "','" + PopUpValues[2] + "');" + toReplace;
+                            hrefUrl = hrefUrl + "<td style='width:100%'> <a onMouseover='TestscrollTo(this);' onMouseout='mouseOutFun(this);'";
+                            hrefUrl = hrefUrl + " " + "class='AutoStyleAnchorWithoutImg' href='#' onclick=" + popUpFun.replace(/thh/g, '"') + " >" + item.value + "</a></td></tr></table>";
+                        }
+
+                    }
+                }
+                else {
+
+                    if (item.countTotalFavorites < 10) {
+                        if (item.isFavorite === 0) {
+                            hrefUrl = hrefUrl + "<td style='width:97%'> <a onMouseover='TestscrollTo(this);' onMouseout='mouseOutFun(this);'";
+                            hrefUrl = hrefUrl + " " + "class='AutoStyleAnchor' href='" + item.url + "' style='width:97%'>" + item.value + "</a></td>";
+                            hrefUrl = hrefUrl + "<td>" + ImgTag + "</td></tr></table>";
+                        }
+                        else {
+                            hrefUrl = hrefUrl + "<td style='width:100%'> <a onMouseover='TestscrollTo(this);' onMouseout='mouseOutFun(this);'";
+                            hrefUrl = hrefUrl + " " + "class='AutoStyleAnchorWithoutImg' href='" + item.url + "'>" + item.value + "</a></td></tr></table>";
+                        }
+                    }
+                    else {
+                        hrefUrl = hrefUrl + "<td style='width:100%'> <a onMouseover='TestscrollTo(this);' onMouseout='mouseOutFun(this);'";
+                        hrefUrl = hrefUrl + " " + "class='AutoStyleAnchorWithoutImg' href='" + item.url + "'>" + item.value + "</a></td></tr></table>";
+                    }
+                }
+                return $("<li title='Click here to navigate " + item.masterColumnHeader + '->' + item.value + " ' style='width:auto;'></li>")
+               .data("item.autocomplete", item)
+               .append(hrefUrl)
+               .appendTo(ul);
+
+            }
+            else {
+                return $("<li style='width:auto;background-color:#EAE7E7;'></li>")
+               .data("item.autocomplete", item)
+                .append("<a style='cursor:pointer;width:95.8%;'>" + item.value + "</a>")
+                .appendTo(ul);
+            }
+
+            document.write(ul);
+        };
+    }  
+       
+</script>
+<script type="text/javascript">
+    function RedirectAskHCL() {
+        var textvalue = $('#txtSearch').val();
+        textvalue = encodeURIComponent(textvalue);
+
+        if (document.getElementById('HF_AppSearch').value == "AskHCL") {//manju
+        window.open('http://ask.hcl.com/Pages/results.aspx?k=' + textvalue, '', 'width=1350px,height=570px,menubar,resizable,scrollbars,status,titlebar,toolbar,directories,top=0,left=0,location=yes');
+    }//manju
+ else if (document.getElementById('HF_AppSearch').value == "HelpYou") {//manju
+            window.open('https://hclo365.sharepoint.com/sites/HR-Studio-FAQ/SitePages/SearchFAQ.aspx?k=' + textvalue, '', 'width=1350px,height=570px,menubar,resizable,scrollbars,status,titlebar,toolbar,directories,top=0,left=0,location=yes'); //manju 
+        } //manju
+}
+    //    $(document).ready(function () {
+    //        $("#txtSearch").width('78%');
+    //        autoComplete();
+    //    });
+    function CheckToRedirectAskHCL() 
+{
+
+        //if (SearchValidation()) {
+if ($('#txtSearch').val().length >= 3 && $('#txtSearch').val() !== "Type here to search" && $('#txtSearch').val() !== "Type atleast 3 characters to search") {
+            autoComplete();
+            if (document.getElementById('HF_AppSearch').value == "AppSearch") {
+                autoComplete();
+                $("#txtSearch").autocomplete({ disabled: false, minlength: 3 });
+            }
+            else if (document.getElementById('HF_AppSearch').value == "AskHCL") {
+                autoComplete();
+                $("#txtSearch").autocomplete({ disabled: true, minlength: 3 });
+                RedirectAskHCL();
+            }
+            else if (document.getElementById('HF_AppSearch').value == "HelpYou") {//manju
+                autoComplete();
+                $("#txtSearch").autocomplete({ disabled: true, minlength: 3 });
+                RedirectAskHCL();
+            }
+            else {
+                return false;
+            }
+        }
+else
+{
+SearchValidation();
+return false;
+}
+    }
+
+    function SearchValidation() {
+//alert("SearchValidation");
+        if ($('#txtSearch').val().length == 0 || $('#txtSearch').val() == "Type here to search" || $('#txtSearch').val() == "Type atleast 3 characters to search") {
+            alert('Please enter your search criteria.');
+            document.getElementById("txtSearch").focus();
+            return false;
+        }
+        else if ($('#txtSearch').val().length < 3) {
+            alert('Search Criteria should be more or equal to three characters.');
+            document.getElementById("txtSearch").focus();
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+
+    function removeSpecial(event) {
+        var k = String.fromCharCode(('which' in event) ? event.which : event.keyCode);
+        if (k.match(/[<|>]/g)) {
+            event.preventDefault ? event.preventDefault() : event.returnValue = false;
+        }
+    }
+
+    //  function inputBlur(obj) {
+    // if ($(obj).val() == '') {    
+    // $("#hclsearch li").click(function () {
+    //        if (this.id == "AppSearch") 
+    //           {
+    //                $("#txtSearch").val("Type atleast 3 characters to search");
+    //            }
+    //            else if (this.id == "AskHCL") {
+    //                $("#txtSearch").val("Type here to search");
+    //            }
+    //          });
+    //        }
+
+    //    }
+
+    function inputOnFocus(obj) {
+        if ($(obj).val() == 'Type here to search' || $(obj).val() == 'Type atleast 3 characters to search') {
+            $(obj).val('');
+        }
+    }
+
+</script>
+<div class="search wow fadeInUp" id="Search">
+    <span class="dd-app" id="appSearchHD"><span id="seaTypeText">App Search</span>
+<div class="resSearchIC">
+    </div>
+        <div class="searchDD">
+        </div>
+        <ul id="hclsearch">
+            <span class="arrowSprit"></span>
+            <li value="1" id="AppSearch" class="active">App Search</li>
+            <li value="2" id="AskHCL">Ask HCL</li>
+            <li value="3" id="AdvancedSearch"><a href="http://wf13.myhcl.com/sites/Search/advanced_new.aspx"
+                target="_blank">Advanced Search</a></li>
+            <li value="4" id="HelpYou">FAQ Hub</li><!--manju-->
+        </ul>
+        <input id="HF_AppSearch" type="hidden" value="AppSearch"/><!--manju-->
+        <input id="hddScrnResln" type="hidden" value="0" /><!--rana-->
+        
+        <input id="hddbrowserversion" type="hidden" value="0" /><!--MR-->
+    </span>
+    <div id="DivautoComplete">
+        <input type="text" id="txtSearch" class="seaInput autocomplete" name="searchtext"
+            onfocus="inputOnFocus(this)" onkeypress="removeSpecial(event)" onkeydown="javascript:if (window.event.keyCode == 13) {CheckToRedirectAskHCL(); return false;}" />
+        <input type="button" class="seacrh-btn" value="Search" id="Searchbutton" />
+    </div>
+</div>
+<script type="text/javascript">
+var eventbound="n";
+    $("#Searchbutton").hide();
+    $(document).ready(function () {
+
+        //rana
+        if (document.getElementById('hddScrnResln').value == '0') {
+            var srn_width = $(window).width();
+            var srn_Height = $(window).height();
+            var total = srn_width + 'X' + srn_Height;
+            $("#hddScrnResln").val(total);
+            //add mr
+            var browser = get_browser();
+            // alert(browser);
+          
+            //$("#hddbrowser").val(browser);
+            var browserversion = browser.version;
+          //  alert("1-"+browserversion);
+            $("#hddbrowserversion").val(browserversion);
+            //end mr
+
+        }
+        function get_browser() {
+          
+          
+            var ua = navigator.userAgent, tem, M = ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || [];
+          
+            if (/trident/i.test(M[1])) {
+                tem = /\brv[ :]+(\d+)/g.exec(ua) || [];
+                return { name: 'IE', version: (tem[1] || '') };
+            }
+            if (M[1] === 'Chrome') {
+                tem = ua.match(/\bOPR|Edge\/(\d+)/)
+                if (tem != null) { return { name: 'Opera', version: tem[1] }; }
+            }
+            M = M[2] ? [M[1], M[2]] : [navigator.appName, navigator.appVersion, '-?'];
+            if ((tem = ua.match(/version\/(\d+)/i)) != null) { M.splice(1, 1, tem[1]); }
+            return {
+                //            name: M[0],
+                version: M[1]
+            };
+        }
+
+        autoComplete();
+        $("#txtSearch").addClass('seaInput autocomplete');
+        $("#txtSearch").removeClass('seaInputASK autocomplete');
+    });
+    $("#hclsearch li").click(function () {
+
+	var prevValue =  document.getElementById('HF_AppSearch').value;
+//alert(prevValue);
+//alert(this.id);
+        document.getElementById('HF_AppSearch').value = this.id;
+        if ($(this).attr('id') == "AskHCL") {
+            $("#Searchbutton").show();
+            $("#txtSearch").removeClass('seaInput autocomplete');
+            $("#txtSearch").addClass('seaInputASK autocomplete');
+            $("#txtSearch").val("Type here to search");
+//alert(eventbound);
+if(eventbound =="n")
+{
+            $("#Searchbutton").bind("click", function () {
+
+                CheckToRedirectAskHCL();
+eventbound = "y";
+            });
+}
+
+        }
+        else if ($(this).attr('id') == "HelpYou") { //manju
+
+            $("#Searchbutton").show(); //manju
+            $("#txtSearch").removeClass('seaInput'); //manjuautocomplete
+            $("#txtSearch").addClass('seaInputASK'); //manjuautocomplete
+            $("#txtSearch").val("Type here to search"); //manju
+
+//alert(eventbound);
+if(eventbound =="n")
+{
+            $("#Searchbutton").bind("click", function () {
+
+                CheckToRedirectAskHCL();
+eventbound = "y";
+            });
+}
+
+        } //manju
+        else {
+            $("#Searchbutton").hide();
+            $("#txtSearch").addClass('seaInput autocomplete');
+            $("#txtSearch").removeClass('seaInputASK autocomplete');
+            $("#txtSearch").val("Type atleast 3 characters to search");
+            autoComplete();
+        }
+    });
+</script>
+        <div class="owl-carousel clearfix wow fadeInUp" id="smallBanner">
+
+    <div class="item">
+        <div><a href="https://www.myhcl.com/bprhome/Home/Index" onclick='HitLog(6983);'><img src="../Images/Large/smallBanner_Neetesh-PerformanceReview-23to25-09-2020.jpg" id="MainBannerimageid_6983"/></a></div>
+    </div>
+    <div class="item">
+        <div><a href="https://hclo365.sharepoint.com/sites/COVID/SitePages/TakeCareHCL.aspx" onclick='HitLog(6984);'><img src="../Images/Large/smallBanner_Aparna_CovengerBanners.jpg" id="MainBannerimageid_6984"/></a></div>
+    </div>
+    <div class="item">
+        <div><a href="https://cutt.ly/lfKahH6" onclick='HitLog(6974);'><img src="../Images/Large/smallBanner_AparnaInfra.jpg" id="MainBannerimageid_6974"/></a></div>
+    </div>
+    <div class="item">
+        <div><a href="https://hclo365.sharepoint.com/:b:/s/IC/ESghewZcWbJGvNhbzq2lNyIBMSdJLvYmnNOqTqvdtsf0AQ?e=VMPzvv" onclick='HitLog(6987);'><img src="../Images/Large/smallBanner_Neetesh_T2IDcalendar-24-09-2020.jpg" id="MainBannerimageid_6987"/></a></div>
+    </div>
+    <div class="item">
+        <div><a href="https://salescentral.myhcl.com/discover/Detail.aspx?cx=MPerlz3Sd5jnG1EwB60mJw%253d%253d" onclick='HitLog(6988);'><img src="../Images/Large/smallBanner_ZShivangiERSMintvisor09242020.jpg" id="MainBannerimageid_6988"/></a></div>
+    </div>
+        </div>
+        <div class="horizontalTab wow fadeInUp updatedtab">
+            
+            <div class="hor_1">
+                
+                <style type="text/css">
+                    .innercontent_new2 {
+                        padding: 15px;
+                        max-height: 320px;
+                        min-height: 320px;
+                        overflow-y: auto;
+                        margin-bottom: 10px;
+                    }
+
+                    .mh-wh2 {
+                        background: #fff;
+                        border: 1px solid #ccc;
+                        float: left;
+                        margin-bottom: 20px;
+                    }
+
+                    .id-0 {
+                        width: 100%;
+                    }
+
+                    .id-1 {
+                        width: 50%;
+                    }
+                    .top-padding-bb {
+                        padding-top: 0px;
+                    }
+                </style>
+                    <div class='mh-wh2 GrCl1 id-0'>
+        <h3 class="custom_blue_hd">Blogs</h3>
+        <div class="innercontent_new2">
+
+            <img src='../Images/Large/smallBanner_Blog-Roshni.jpg' class='float-right inFocus-img1' />
+            <p><strong>Roshni Nadar Malhotra - Taking charge amid challenges and opportunities</strong><br />
+<br />
+In a year defined by a global pandemic that has challenged almost every aspect of life, leadership is being constantly tested. The 25 business leaders on the 2020 Forbes Asia�s Power Businesswomen list have risen to that challenge and are demonstrating their mettle in these difficult times. Each has a track record of success either running a company with sizable revenues or founding a start-up valued at over $1 billion.</p>
+
+<p>�</p>
+
+<p>In mid-July, Roshni Nadar Malhotra took charge as chairperson of HCL Technologies. She�s been an executive with the Noida, India-based company for 12 years, of which the last two were as Vice Chairperson. While in that post, she backed HCL�s $1.8 billion purchase from IBM of a portfolio of its products. The acquisition, which closed last year, was the biggest by value in the company�s 29-year history.</p>
+
+<p>�</p>
+
+<p><a href="https://www.forbes.com/sites/forbesasiateam/2020/09/14/forbes-asias-power-businesswomen-2020-list/#1dfe7cb674d2">Click here�</a>to read more.</p>
+
+<p><br />
+<br />
+�</p>
+
+            <div class="clearfix">
+            </div>
+            <h5 class="short_head"></h5>
+               
+        </div>
+                    </div>
+            </div>
+        </div>
+        <div class="swapeDestop">
+            <div class="crossword_banner staticBanner wow fadeInUp">
+    <div class="mh-wh">
+        <h3 class="custom_blue_hd">
+            WHATS NEW</h3>
+        <div class="idea-pren">
+	<img src='../Images/Large/smallBanner_WHATSNEW.png'  />
+            <a class="fancybox" href="#mhwhn" onclick="HitLog(6928);">
+                <h3>
+                    Introducing two new solutions for Cloud Spend Visibility and Optimization</h3>
+                <p>
+                    HCL has introduced two new solutions for its clients. These solutions are designed to help organizations gain complete visibility of their cloud spend on a single dashboard as well as help them identify cost optimization opportunities.</p>
+            </a>
+        </div>
+    </div>
+    <div class="mh-whatNew" id="mhwhn" style="display: none;">
+        <h3>
+            Introducing two new solutions for Cloud Spend Visibility and Optimization</h3>
+        <img src='../Images/Large/smallBanner_WHATSNEW.png'  />
+        <p>
+            <p>The advent of the multi-cloud model has provided various benefits to organizations. However, this has also led to complexities in managing consumption billing.</p>
+
+<p>To resolve this billing complexity and help organizations, HCL has introduced two new solutions for its clients to ensure complete visibility into their cloud spend and identify opportunities to optimize � all on a single dashboard:�</p>
+
+<p>�</p>
+
+<ul>
+	<li>Cloud Spend Visibility Solution (Standard Solution): Cloud Spend Visibility with Flexera Optima</li>
+	<li>Cloud Spend Visibility and Optimization Solution (Enterprise Solution): Cloud Spend Visibility and Optimization with Flexera Optima</li>
+</ul>
+
+<p>�</p>
+
+<p><a href="https://bit.ly/32sk3NS">Know more</a></p>
+
+        </p>
+    </div>
+
+            <div class="mh-wh">
+                
+                <h3 class="custom_blue_hd">
+                    IJP and REFERRALS
+                </h3>
+                <div class="idea-pren" id="FooterSection2">
+                            <a class="" href="https://bit.ly/3fDmZvQ" target ="_blank"  onclick="HitLog(6651);">
+                                <h3>
+                                    Job openings in Sales Transformation &amp; Marketing, LSH, MEGA LT, HCL Software, ERS and DNA</h3>
+                                <p>
+                                    DRYiCE, PowerObjects, Sales Transformation &amp; Marketing, LSH, MEGA LT, HCL Software, ERS and DNA are hiring for multiple job opportunities. 
+Click here to know about roles and responsibilities. Apply now!</p>
+                            </a>
+                </div>
+            </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="rgtCont">
+
+
+<div class="panel paneltype1 resMarRGT ceoPanel">
+        <h2 style="display:none">
+            
+        </h2>
+	 <h3 class="hdCEO"><span class="hd-icon1"></span> MEME BY CVK</h3>
+        <div class="panel-in ceo-msg">
+            
+                
+            
+                <a href="https://meme.hcl.com/users/vijaykumarc" target ="_blank" onclick='HitLog(5076)'>
+                    <img src='../Images/smallBanner_MEMEBYCVK.jpeg' class='float-left ceo-img' />
+                     On Monday, we inaugurated our first Global Delivery Centre in Sri Lanka in the presence of the Honourable Prime Minister of Sri Lanka, Shri Mahinda Rajapaksa, H.E., Shri Gopal Baglay, Indian High Commissioner to Sri Lanka, and our Founder, Managing Director &amp; Chief Strategy, Mr. Shiv Nadar along with our Chairperson Mrs. Roshni Nadar Malhotra. We envision this Centre as one of our key global delivery hubs that will work on IT projects for our clients from across the world. Today, 100 employees have already joined our team in Colombo and we hope to take this number to 3,000 in 3 years. Please join me in welcoming all our Sri Lankan colleagues to the HCL family. May we all grow from strength to strength #AyubowanSriLanka
+                   
+                    </a> 
+<!--            <div></div>
+            <div style="float:right">
+            <A onclick=HitLog(5076); href='https://meme.hcl.com/users/vijaykumarc'>
+            <IMG border=0 src="../Images/like.jpg" width=19 height=17></A>
+            <A onclick=HitLog(5076); href='https://meme.hcl.com/users/vijaykumarc'>
+            <IMG border=0 src="../Images/comment.jpg" width=19 height=17>
+            </A>
+            </div>-->
+        </div>
+	<div class="panel-in ceo1-msg" >
+           <A onclick=HitLog(5076); href='https://meme.hcl.com/users/vijaykumarc' target='_blank'>
+            <IMG border=0 src="../Images/like.jpg" width=19 height=17></A>
+            <A onclick=HitLog(5076); href='https://meme.hcl.com/users/vijaykumarc' target='_blank'>
+            <IMG border=0 src="../Images/comment.jpg" width=19 height=17>
+            </A>
+            </div>
+</div>
+ 
+        <div class="scalDump border_active">
+
+            <div>
+<div class="panel paneltype2 panelShow">
+  
+        <h3>
+            <span class="hd-icon1"></span>&nbsp; Discover Box</h3>
+        <div class="scroll">
+           <a href="#" target="_blank">
+   <a href="https://salescentral.myhcl.com/discover/Detail.aspx?cx=2bxtb1Sz5kHZ4rJ61wYQKw%253d%253d" target ="_blank" onclick='HitLog(6982)'>
+</a>
+                <p>
+
+                    <div><a href="https://salescentral.myhcl.com/discover/Detail.aspx?cx=2bxtb1Sz5kHZ4rJ61wYQKw%253d%253d" onclick='HitLog(6982);'><img src="../Images/smallBanner_DiscoverBox.jpg"/></a></div></p>
+                  
+                HCL and Greater Manchester Police Partnership named &quot;Innovation of the Year&quot; Gold Winner and &quot;Overall Winner&quot; at the UK Business Awards 2020</a>
+        </div>
+</div>
+
+
+            </div>
+
+            <div id="OpinionPollSection">
+
+<div class="panel paneltype2 panelShow">
+
+
+        <h3>
+            <span class="hd-icon_video"></span>&nbsp; Trending Video</h3>
+        <div class="scroll">
+            <a href="#" target="_blank">
+                <p>
+                    <div><a href="https://bit.ly/2YJoliV" onclick='HitLog(6927);'><img src="../Images/Large/smallBanner_TrendingVideo.png"/></a></div></p>
+                  
+                Watch this 3 minute video to learn how Actian Avalanche - world&#39;s fastest fully managed hybrid cloud data warehouse available on Azure, AWS and on-premise, delivers better value and lower TCO for your customer.</a>
+        </div>
+</div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<!--start changes for Eva-->
+
+<script src="https://dsd.hcl.com/eisautobot/chatbot/scripts/jquery-1.11.1.min.js"></script>
+<link href="https://dsd.hcl.com/eisautobot/chatbot/css/autobot-custom.css" rel="stylesheet" />
+
+<script language="javascript" type="text/javascript" src="https://dsd.hcl.com/eisautobot/chatbot/HCLchatbot.js" boturl="wss://eva.hcl.com"
+        height="470" width="340" left="-150" bottom="-170">
+</script>
+<!--start changes for Eva-->
+
+<div class="swapeMobile wrapperIn clearfix">
+</div>
+<div class="browser-msg">
+    This application is best viewed on Microsoft Internet Explorer (9.x and above)
+</div>
+
+            </div>
+            <div id="footer">
+                
+            </div>
+            <a href="javascript:void(0)" class="back-to-top" title="Go back to Top">
+                Top <span></span>
+            </a>
+        </div>
+    </div>
+    <div id="eventContent" title="Event Details">
+        <div id="eventInfo">
+        </div>
+        <p>
+            <strong><a id="eventLink" target="_blank">Read More</a></strong>
+        </p>
+    </div>
+    <script type="text/javascript" language="javascript" src="/bprhome/js/jquery-1.11.1-min.js"></script>
+    
+    <script type="text/javascript" language="javascript" src="/bprhome/js/custom.js"></script>
+    <script src="/bprhome/js/jquery.bxslider.js" type="text/javascript"></script>
+
+    
+
+    
+
+    
+    
+
+
+    
+
+
+
+    
+
+    
+
+    
+
+    
+
+
+    <script type="text/javascript" language="javascript" src="/bprhome/js/jquery-ui.min.js"></script>
+
+
+
+
+
+    <script type="text/javascript">
+$(document).ready(function() {
+  	$("#smallBanner").owlCarousel({ autoPlay:true, singleItem:true, stopOnHover:true, slideSpeed:300, paginationSpeed:400});
+	$('#parentHorizontalTab').easyResponsiveTabs({
+            type: 'vertical', //Types: default, vertical, accordion
+            width: 'auto', //auto or any width like 600px
+            fit: true, // 100% fit in a container
+            tabidentify: 'ver_1', // The tab groups identifier
+            /*activate: function(event) { // Callback function if tab is switched
+                var $tab = $(this);
+                var $info = $('#nested-tabInfo');
+                var $name = $('span', $info);
+                $name.text($tab.text());
+                $info.show();
+            }*/
+        });
+    /*-- add for new tab--*/
+	$('ul.resp-tabs-list>.slideSub').click(function(e) {
+	    e.stopPropagation();
+	    $(this).toggleClass("slideSubActive");
+	    $('ul.ver_1>li').removeClass("resp-tab-active");
+	    $(".slideOpen").slideToggle("fast");
+	});
+	$('ul.ver_1>li').click(function(e) {
+	    e.stopPropagation();
+	    $('.slideSub').removeClass("slideSubActive");
+	    $(".slideOpen").slideUp("fast");
+	});
+    /*-- end --*/
+        // Child Tab
+        $('#ChildVerticalTab_1').easyResponsiveTabs({
+            type: 'default',
+            width: 'auto',
+            fit: true,
+            tabidentify: 'hor_1', // The tab groups identifier
+        });
+		$('#ChildVerticalTab_2').easyResponsiveTabs({
+            type: 'default',
+            width: 'auto',
+            fit: true,
+            tabidentify: 'hor_2', // The tab groups identifier
+        });
+		$('#ChildVerticalTab_3').easyResponsiveTabs({
+            type: 'default',
+            width: 'auto',
+            fit: true,
+            tabidentify: 'hor_3', // The tab groups identifier
+        });
+
+		$('.horizontalTab').easyResponsiveTabs({
+            type: 'default', //Types: default, vertical, accordion
+            width: 'auto', //auto or any width like 600px
+            fit: true, // 100% fit in a container
+            //closed: 'accordion', // Start closed if in accordion view
+            tabidentify: 'hor_1', // The tab groups identifier
+            activate: function(event) { // Callback function if tab is switched
+                var $tab = $(this);
+                var $info = $('#nested-tabInfo2');
+                var $name = $('span', $info);
+                $name.text($tab.text());
+                $info.show();
+            }
+
+        });
+
+        $("a.gallery-group").fancybox();  //Added by ruchi on date 5 july 16
+		$('.fancybox').fancybox(); //Added by ruchi on date 5 july 16
+
+});
+
+    </script>
+<input id="HF_TopHeader" name="HF_TopHeader" type="hidden" value="../Images/Extralarge/smallBanner_Header-Covengers.jpg" /><input id="HF_mainBanner" name="HF_mainBanner" type="hidden" value="../Images/Large/smallBanner_AparnaInfra.jpg,../Images/Medium/smallBanner_AparnaInfra.jpg,../Images/Small/smallBanner_AparnaInfra.jpg^6974*../Images/Large/smallBanner_Aparna_CovengerBanners.jpg,../Images/Medium/smallBanner_Aparna_CovengerBanners.jpg,../Images/Small/smallBanner_Aparna_CovengerBanners.jpg^6984*../Images/Large/smallBanner_Neetesh-PerformanceReview-23to25-09-2020.jpg,../Images/Medium/smallBanner_Neetesh-PerformanceReview-23to25-09-2020.jpg,../Images/Small/smallBanner_Neetesh-PerformanceReview-23to25-09-2020.jpg^6983*../Images/Large/smallBanner_Neetesh_T2IDcalendar-24-09-2020.jpg,../Images/Medium/smallBanner_Neetesh_T2IDcalendar-24-09-2020.jpg,../Images/Small/smallBanner_Neetesh_T2IDcalendar-24-09-2020.jpg^6987*../Images/Large/smallBanner_ZShivangiERSMintvisor09242020.jpg,../Images/Medium/smallBanner_ZShivangiERSMintvisor09242020.jpg,../Images/Small/smallBanner_ZShivangiERSMintvisor09242020.jpg^6988" /><input id="HF_mainBannerColumnid" name="HF_mainBannerColumnid" type="hidden" value="6974*6984*6983*6987*6988" /><input id="HF_Footerbanner" name="HF_Footerbanner" type="hidden" value="../Images/Large/smallBanner_Sri-VC.jpg,../Images/Medium/smallBanner_Sri-VC.jpg,../Images/Small/smallBanner_Sri-VC.jpg" />    <input type="hidden" id="UserEmailId" name="UserEmailId" placeholder="UserEmailId" value="dV5xFexfQAvPJzuOViboICXr5eZ6KGsQu1gFE2KXkHjEWABEyxpVrA==" />
+    
+    <input id="HydIsintranet" type="hidden" value='True' />
+    <input id="HF_CheckHrStudioHit" type="hidden" value= />
+</body>
+</html>
