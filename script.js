@@ -1,1 +1,5 @@
-document.write("<h1>hello world</h1>");
+function bt()
+{
+    alert("both are same");
+}
+bt();
